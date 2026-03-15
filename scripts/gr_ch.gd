@@ -10,7 +10,7 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("g"):
 		for body in body_in_zone:
-			body.dir_p*=-1
+			body.dir_g*=-1
 
 
 func _on_body_entered(body: Node2D) -> void:

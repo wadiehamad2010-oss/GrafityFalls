@@ -1,7 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://cfmjgl8haoem3"]
+[gd_scene load_steps=21 format=3 uid="uid://cfmjgl8haoem3"]
 
 [ext_resource type="Script" uid="uid://cswrw8mua76u" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://db55hkfgodnf6" path="res://assets/AnimationSheet_Character (1).png" id="2_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://idv7utdvlktw" path="res://assets/jump.mp3" id="3_qhqgy"]
+[ext_resource type="AudioStream" uid="uid://cohj74d588mdr" path="res://assets/g.mp3" id="4_dqkch"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("2_qhqgy")
@@ -128,7 +130,7 @@ animations = [{
 radius = 5.0
 height = 24.0
 
-[node name="player" type="CharacterBody2D" groups=["gravity"]]
+[node name="player" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -141,12 +143,12 @@ autoplay = "idle"
 position = Vector2(-1, 2)
 shape = SubResource("CapsuleShape2D_4r5pv")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(0, -36)
-zoom = Vector2(2.51, 2.51)
-limit_left = 0
-limit_bottom = 0
-position_smoothing_enabled = true
-rotation_smoothing_enabled = true
-
 [node name="Timer" type="Timer" parent="."]
+
+[node name="jump" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qhqgy")
+bus = &"sfx"
+
+[node name="g" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_dqkch")
+bus = &"sfx"

@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://v7pxkur5yani"]
+[gd_scene load_steps=0 format=3 uid="uid://v7pxkur5yani"]
 
 [node name="PopupPanel" type="PopupPanel"]
 oversampling_override = 1.0

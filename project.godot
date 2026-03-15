@@ -14,9 +14,9 @@ config/name="the project"
 run/main_scene="uid://g4dynn2d2hs0"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 
-[autoload]
+[audio]
 
-Trandition="*res://scenes/Trandition.tscn"
+buses/default_bus_layout=""
 
 [global_group]
 

@@ -1,9 +1,12 @@
 extends CharacterBody2D
 
-@onready var timer: Timer = $Timer
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -280.0
+
+@onready var g: AudioStreamPlayer2D = $g
+@onready var jump: AudioStreamPlayer2D = $jump
+@onready var timer: Timer = $Timer
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 # هذ المتغير لازم يكون في كل حاجة حاب نبدل لها الجاذبية
 var dir_p=1
@@ -17,6 +20,10 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	move(direction,is_floor)
 	move_and_slide()
+	# عملية تغير الجاذبية لنفسه 
+	if Input.is_action_just_pressed("g") and is_floor:
+		dir_p*=-1
+		g.play()
 	
 # دالة القفز والجمب
 func gravity_jump(delta,is_floor):
@@ -24,6 +31,7 @@ func gravity_jump(delta,is_floor):
 		velocity +=get_gravity()*delta*dir_p
 	if Input.is_action_just_pressed("ui_accept") and is_floor:
 		velocity.y =JUMP_VELOCITY*dir_p
+		jump.play()
 	if not is_floor:
 		animated_sprite_2d.play("jump")
 		if dir_p==1:
