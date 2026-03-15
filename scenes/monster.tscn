@@ -11,7 +11,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_n78d1"]
 radius = 6.0
-height = 28.0
+height = 22.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7han3"]
 atlas = ExtResource("1_v8ewj")
@@ -145,10 +145,11 @@ shape = SubResource("CapsuleShape2D_n78d1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 self_modulate = Color(0, 0, 0, 1)
-scale = Vector2(1.5, 1.5)
+position = Vector2(-1.1920929e-07, -4.7683716e-07)
+scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_0xprk")
 animation = &"walk"
 autoplay = "walk"
 
-[node name="direcror" type="RayCast2D" parent="."]
-target_position = Vector2(15, 16)
+[node name="director" type="RayCast2D" parent="."]
+target_position = Vector2(11, 13)
