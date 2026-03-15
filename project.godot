@@ -11,13 +11,12 @@ config_version=5
 [application]
 
 config/name="the project"
-run/main_scene="uid://da4i8liabeqt2"
+run/main_scene="uid://g4dynn2d2hs0"
 config/features=PackedStringArray("4.5", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [autoload]
 
-Trandition="*res://Trandition.tscn"
+Trandition="*res://scenes/Trandition.tscn"
 
 [global_group]
 
