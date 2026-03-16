@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://jonmml1melxa"]
+
+[ext_resource type="Script" uid="uid://y1hing51pmjo" path="res://scripts/map_scene.gd" id="1_wikxs"]
+[ext_resource type="Texture2D" uid="uid://cmj3sb47gw3i6" path="res://assets/backround_levls.png" id="2_j1nvq"]
+[ext_resource type="Texture2D" uid="uid://bote2kh7xi1ku" path="res://assets/icon.png" id="3_1ddn7"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_wikxs")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 7.0
+offset_right = 1151.0
+offset_bottom = 643.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_j1nvq")
+expand_mode = 1
+
+[node name="Button1" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 463.0
+offset_right = 54.0
+offset_bottom = 487.0
+flat = true
+
+[node name="FinishedSprite" type="Sprite2D" parent="TextureRect/Button1"]
+position = Vector2(11, 12)
+scale = Vector2(0.64705867, 0.46568596)
+texture = ExtResource("3_1ddn7")
+region_enabled = true
+region_rect = Rect2(144, 352, 34, 51)
+
+[node name="Button2" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 377.0
+offset_right = 207.0
+offset_bottom = 401.0
+flat = true
+
+[node name="FinishedSprite" type="Sprite2D" parent="TextureRect/Button2"]
+visible = false
+position = Vector2(11.5, 11.9999695)
+scale = Vector2(0.6764708, 0.47058845)
+texture = ExtResource("3_1ddn7")
+region_enabled = true
+region_rect = Rect2(144, 352, 34, 51)
+
+[node name="Button3" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 284.0
+offset_right = 172.0
+offset_bottom = 308.0
+flat = true
+
+[node name="FinishedSprite" type="Sprite2D" parent="TextureRect/Button3"]
+visible = false
+position = Vector2(123, -50)
+scale = Vector2(0.6764708, 0.47058845)
+texture = ExtResource("3_1ddn7")
+region_enabled = true
+region_rect = Rect2(144, 352, 34, 51)
+
+[node name="Button4" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 262.0
+offset_top = 223.0
+offset_right = 284.0
+offset_bottom = 247.0
+flat = true
+
+[node name="FinishedSprite" type="Sprite2D" parent="TextureRect/Button4"]
+visible = false
+position = Vector2(-101, 72)
+scale = Vector2(0.6764708, 0.43137276)
+texture = ExtResource("3_1ddn7")
+region_enabled = true
+region_rect = Rect2(144, 352, 34, 51)
+
+[connection signal="pressed" from="TextureRect/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="TextureRect/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="TextureRect/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="TextureRect/Button4" to="." method="_on_button_4_pressed"]
